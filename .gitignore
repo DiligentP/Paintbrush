@@ -1,2 +1,7 @@
+# intellij configs
 .idea
+.class
 Paintbrush.iml
+
+# intellij comfile .class folder
+/out

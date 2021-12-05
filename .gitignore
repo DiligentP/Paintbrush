@@ -5,3 +5,7 @@ Paintbrush.iml
 
 # intellij comfile .class folder
 /out
+
+# intellij manifest
+/src/META-INF
+

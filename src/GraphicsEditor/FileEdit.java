@@ -15,7 +15,7 @@ public class FileEdit extends JFrame{
 	public static void FileSave() {
 		JFrame f = new JFrame();
 
-		FileDialog dialog = new FileDialog(f, "ÀúÀå", FileDialog.SAVE);
+		FileDialog dialog = new FileDialog(f, "ì €ìž¥", FileDialog.SAVE);
 		dialog.setVisible(true);
 
 		String path = dialog.getDirectory() + dialog.getFile();
@@ -25,14 +25,14 @@ public class FileEdit extends JFrame{
 			ImageIO.write(bufImage, "PNG", new File(path + ".png"));
 			System.out.println(bufImage);
 		} catch (IOException e) {
-			System.out.println("ÀúÀå ¿À·ù");
+			System.out.println("ì €ìž¥ ì˜¤ë¥˜");
 		}
 	}
 
 	public static boolean FileLoad() {
 		JFrame f = null;
 		try {
-			FileDialog dialog = new FileDialog(f, "ºÒ·¯¿À±â", FileDialog.LOAD);
+			FileDialog dialog = new FileDialog(f, "ë¶ˆëŸ¬ì˜¤ê¸°", FileDialog.LOAD);
 
 			dialog.setVisible(true);
 			
@@ -42,11 +42,11 @@ public class FileEdit extends JFrame{
 			if (dialog.getFile() != null) {
 				loadImage = ImageIO.read( new File (path));
 				CanvasPanel.loadFlag = true;
-				System.out.println("ºÒ·¯¿À±â ¼º°ø" + dialog.getFile());
+				System.out.println("ë¶ˆëŸ¬ì˜¤ê¸° ì„±ê³µ" + dialog.getFile());
 				return true;
 			}
 		} catch (IOException e) {
-			System.out.println("ºÒ·¯¿À±â ½ÇÆÐ");	
+			System.out.println("ë¶ˆëŸ¬ì˜¤ê¸° ì‹¤íŒ¨");	
 		}
 		return false;
 	}

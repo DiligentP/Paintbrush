@@ -11,7 +11,7 @@ public class MenuPanel extends JPanel implements ActionListener{
 	public static int button = 0;
 	final int x = 10, y = 130, w = 20, h = 20;
 	
-	// Home ÀÌ¹ÌÁö ÆÄÀÏ ¼³Á¤  
+	// Home ì´ë¯¸ì§€ íŒŒì¼ ì„¤ì •  
 	ImageIcon image_Rect = new ImageIcon("./Image/Rect.PNG");
 	ImageIcon image_Circle = new ImageIcon("./Image/Circle.PNG");
 	ImageIcon image_Select = new ImageIcon("./Image/Select.PNG");

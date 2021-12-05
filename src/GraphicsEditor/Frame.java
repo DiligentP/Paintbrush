@@ -10,26 +10,26 @@ public class Frame extends JFrame {
 
 	public Frame() {
 		
-		// ÇÁ·¹ÀÓ ¾ÆÀÌÄÜ ¹× Å¸ÀÌÆ² ¼³Á¤
+		// í”„ë ˆì„ ì•„ì´ì½˜ ë° íƒ€ì´í‹€ ì„¤ì •
 		Toolkit kit = Toolkit.getDefaultToolkit();
 		Image Icon = kit.getImage("./Image/Canvas.PNG");
 		setIconImage(Icon);
 		setTitle("Graphics Editor");
 
-		// ÇÁ·¹ÀÓÃ¢ÀÌ ¿øÇÏ´Â Å©±â¿¡¼­ ¿òÁ÷ÀÌÁö ¾Ê°Ô (true,false)
+		// í”„ë ˆì„ì°½ì´ ì›í•˜ëŠ” í¬ê¸°ì—ì„œ ì›€ì§ì´ì§€ ì•Šê²Œ (true,false)
 		setResizable(false);
 
-		// ÇÁ·¹ÀÓÀ» º¸ÀÌ°Ô ¼³Á¤ (true,false)
+		// í”„ë ˆì„ì„ ë³´ì´ê²Œ ì„¤ì • (true,false)
 		setVisible(true);
 
-		// ÇÁ·¹ÀÓÀÇ Å©±â¸¦ ¼³Á¤
+		// í”„ë ˆì„ì˜ í¬ê¸°ë¥¼ ì„¤ì •
 		setPreferredSize(new Dimension(1000, 1000 / 12 * 7));
 		setSize(1000, 1000 / 12 * 7);
 
-		// ÇÁ·Î±×·¥Ã¢À» Ç×»ó °¡¿îµ¥¿¡¼­ ½ÇÇà
+		// í”„ë¡œê·¸ë¨ì°½ì„ í•­ìƒ ê°€ìš´ë°ì—ì„œ ì‹¤í–‰
 		setLocationRelativeTo(null);
 
-		// ÇÁ·Î±×·¥À» ²ô¸é ÀÚµ¿À¸·Î Á¾·á
+		// í”„ë¡œê·¸ë¨ì„ ë„ë©´ ìë™ìœ¼ë¡œ ì¢…ë£Œ
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}

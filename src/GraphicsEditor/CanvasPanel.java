@@ -44,21 +44,21 @@ public class CanvasPanel extends JPanel implements MouseListener, MouseMotionLis
 	// Draw paint
 	public void paint(Graphics g) {
 		super.paint(g);
-		// ºÒ·¯¿Â ÀÌ¹ÌÁö ±×¸®±â
+		// ë¶ˆëŸ¬ì˜¨ ì´ë¯¸ì§€ ê·¸ë¦¬ê¸°
 		if (loadFlag == true) {
 			g.drawImage(loadImage, 0, 0, null);
 			repaint();
 		}
-		// Shape ±×¸²ÀÚ ±×¸®±â
+		// Shape ê·¸ë¦¼ì ê·¸ë¦¬ê¸°
 		if (shadowFlag == true) {
 			update(g);
 		}
-		// Shape ±×¸®±â
+		// Shape ê·¸ë¦¬ê¸°
 		for (int i = 0; i < shape.size(); i++) {
 			Shape s = shape.elementAt(i);
 			s.paint(g);
 		}
-		// Shape ±×¸² ÀúÀå
+		// Shape ê·¸ë¦¼ ì €ì¥
 		for (int i = 0; i < shape.size(); i++) {
 			g = bufImage.getGraphics();
 			Shape s = shape.elementAt(i);
@@ -128,7 +128,7 @@ public class CanvasPanel extends JPanel implements MouseListener, MouseMotionLis
 			K = ShapeChk();
 			copyFlag = true;
 			if (K > -1 && copyFlag == true) {
-				System.out.println("º¹»ç ÇÃ·¹±×  ON" + " " +copyFlag);
+				System.out.println("ë³µì‚¬ í”Œë ˆê·¸  ON" + " " +copyFlag);
 				MenuPanel.getIconChange(copyFlag);
 				System.out.println("COPY");
 			}
@@ -151,7 +151,7 @@ public class CanvasPanel extends JPanel implements MouseListener, MouseMotionLis
 			w = e.getX();
 			h = e.getY();
 			shadowFlag = false;
-			addShape(); // µµÇü Ãß°¡
+			addShape(); // ë„í˜• ì¶”ê°€
 		}
 
 	}
@@ -174,7 +174,7 @@ public class CanvasPanel extends JPanel implements MouseListener, MouseMotionLis
 	public void mouseMoved(MouseEvent e) {
 	}
 
-	// Shape 4ºĞ¸é °è»êÇÏ´Â ÇÔ¼ö
+	// Shape 4ë¶„ë©´ ê³„ì‚°í•˜ëŠ” í•¨ìˆ˜
 	public void ShpCrdClc(int x, int y, int w, int h) {
 		X = 0;
 		Y = 0;
@@ -211,13 +211,13 @@ public class CanvasPanel extends JPanel implements MouseListener, MouseMotionLis
 	}
 
 	public static void ckVect() {
-		System.out.println("¹éÅÍÀÇ °³¼ö : " + shape.size());
+		System.out.println("ë°±í„°ì˜ ê°œìˆ˜ : " + shape.size());
 		for (int i = 0; i < shape.size(); i++) {
 			Shape s = shape.elementAt(i);
 			System.out.println(i + ": " + "X=" + s.x + " " + "Y=" + s.y + " " + "W=" + (s.w + s.x) + " " + "H="
-					+ (s.h + s.y) + "\t µµÇü:" + s.div + " Ã¤¿öÁü:" + s.fill + " »ö±ò:" + s.color);
+					+ (s.h + s.y) + "\t ë„í˜•:" + s.div + " ì±„ì›Œì§:" + s.fill + " ìƒ‰ê¹”:" + s.color);
 		}
-		System.out.println("ÇöÀç »ö±ò: " + color);
+		System.out.println("í˜„ì¬ ìƒ‰ê¹”: " + color);
 	}
 
 	public static int ShapeChk() {
@@ -233,11 +233,11 @@ public class CanvasPanel extends JPanel implements MouseListener, MouseMotionLis
 
 		if (K > -1) {
 			Shape s = shape.elementAt(K);
-			System.out.println("[ ¼±ÅÃµÈ Shape ]");
+			System.out.println("[ ì„ íƒëœ Shape ]");
 			System.out.println(K + ": " + "X=" + s.x + " " + "Y=" + s.y + " " + "W=" + (s.w + s.x) + " " + "H="
-					+ (s.h + s.y) + "\t µµÇü:" + s.div + " Ã¤¿öÁü:" + s.fill + " »ö±ò:" + s.color);
+					+ (s.h + s.y) + "\t ë„í˜•:" + s.div + " ì±„ì›Œì§:" + s.fill + " ìƒ‰ê¹”:" + s.color);
 		} else {
-			System.out.println("[ ¼±ÅÃµÈ Shape°¡ ¾ø½À´Ï´Ù. ]");
+			System.out.println("[ ì„ íƒëœ Shapeê°€ ì—†ìŠµë‹ˆë‹¤. ]");
 		}
 
 		return K;
@@ -249,11 +249,11 @@ public class CanvasPanel extends JPanel implements MouseListener, MouseMotionLis
 			Shape s = shape.elementAt(K);
 			s.fill = true;
 			s.color = color;
-			System.out.println("[ »ö Ã¤¿öÁü !!! ]");
+			System.out.println("[ ìƒ‰ ì±„ì›Œì§ !!! ]");
 			System.out.println(K + ": " + "X=" + s.x + " " + "Y=" + s.y + " " + "W=" + (s.w + s.x) + " " + "H="
-					+ (s.h + s.y) + "\t µµÇü:" + s.div + " Ã¤¿öÁü:" + s.fill + " »ö±ò:" + s.color);
+					+ (s.h + s.y) + "\t ë„í˜•:" + s.div + " ì±„ì›Œì§:" + s.fill + " ìƒ‰ê¹”:" + s.color);
 		} else {
-			System.out.println("[ Shape¸¦ Ã£Áö ¸øÇß½À´Ï´Ù. ]");
+			System.out.println("[ Shapeë¥¼ ì°¾ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ]");
 		}
 	}
 

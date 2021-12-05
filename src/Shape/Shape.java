@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public abstract class Shape {
-	public int x, y, w, h;		// x,y ½ÃÀÛÁÂÇ¥    w,h ShapeÅ©±â 
+	public int x, y, w, h;		// x,y ì‹œì‘ì¢Œí‘œ    w,h Shapeí¬ê¸° 
 	public int div;			// 1 = Rect   2 = Circle
 	public boolean fill;		// true = Fill , false = not Fill
 	public Color color;		// color RGB

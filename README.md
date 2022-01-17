@@ -1,7 +1,7 @@
 # Paintbrush
-![image](https://user-images.githubusercontent.com/31683152/144752413-ef2954ad-de01-48a8-aaad-4d3e0a828de1.png)
+![image](https://user-images.githubusercontent.com/31683152/144752413-ef2954ad-de01-48a8-aaad-4d3e0a828de1.png){: width="100" height="100"}
 
-![image](https://user-images.githubusercontent.com/31683152/149758420-3e802943-9fd2-4062-85c8-4b1a443a9df4.png)
+![image](https://user-images.githubusercontent.com/31683152/149758420-3e802943-9fd2-4062-85c8-4b1a443a9df4.png){: width="100" height="100"}
 
 
 ## Description / 설명
